@@ -6,13 +6,13 @@ void	ft_bzero(char *str, unsigned int n);
 void test_bzero_1(void)
 {
     //declarations
-    char res[50];
+    char actual[50];
     char string[] = "Lorem Ipsum is simply dummy text";
     int n = 6;
-    strcpy(res, string);
+    strcpy(actual, string);
 
     //calling functions
-    ft_bzero(res, n);
+    ft_bzero(actual, n);
 
     //checking results
     int i = 0;
@@ -21,20 +21,20 @@ void test_bzero_1(void)
         if (i < n)
         {
             char s[4];
-            s[0] = res[i];
+            s[0] = actual[i];
             s[1] = '!';
             s[2] = '0';
             s[3] = '\0';
-            TEST_ASSERT_MESSAGE(res[i] == '\0', s);
+            TEST_ASSERT_MESSAGE(actual[i] == '\0', s);
         }
         else
         {
             char s[4];
-            s[0] = res[i];
+            s[0] = actual[i];
             s[1] = '!';
             s[2] = string[i];
             s[3] = '\0';
-            TEST_ASSERT_MESSAGE(res[i] == string[i], s);
+            TEST_ASSERT_MESSAGE(actual[i] == string[i], s);
         }
         i++;
     }
