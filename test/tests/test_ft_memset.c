@@ -1,7 +1,7 @@
 #include "../../src/unity.h"
 #include <string.h>
 
-void	* ft_memset(void *b, int c, size_t len);
+void	*ft_memset(void *b, int c, size_t len);
 
 void test_memset_1(void)
 {

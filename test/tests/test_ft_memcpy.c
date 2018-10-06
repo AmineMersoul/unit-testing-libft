@@ -1,7 +1,7 @@
 #include "../../src/unity.h"
 #include <string.h>
 
-void	* ft_memcpy(void *destination, const void *source, size_t num);
+void	*ft_memcpy(void *destination, const void *source, size_t num);
 
 void test_memcpy_1(void)
 {
