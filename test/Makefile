@@ -1,7 +1,6 @@
 LIB = ../../libft.a
 
-all: memset bzero memcpy memccpy memmove memchr memcmp strlen strdup strcpy strncpy strcat strncat strlcat strchr strrchr strstr strcmp strncmp atoi isalpha isdigit isalnum isascii isprint toupper tolower memalloc memdel strnew strdel
-
+all: memset bzero memcpy memccpy memmove memchr memcmp strlen strdup strcpy strncpy strcat strncat strlcat strchr strrchr strstr strcmp strncmp atoi isalpha isdigit isalnum isascii isprint toupper tolower memalloc memdel strnew strdel strclr striter striteri strmap strmapi strequ strnequ strnequ strsub strjoin strtrim
 memset:
 	rm -f build/test_memset
 	gcc $(LIB) tests/test_ft_memset.c  ../src/unity.c -o build/test_memset
@@ -156,6 +155,56 @@ strdel:
 	rm -f build/test_strdel
 	gcc $(LIB) tests/test_ft_strdel.c  ../src/unity.c -o build/test_strdel
 	./build/test_strdel
+
+strclr:
+	rm -f build/test_strclr
+	gcc $(LIB) tests/test_ft_strclr.c  ../src/unity.c -o build/test_strclr
+	./build/test_strclr
+
+striter:
+	rm -f build/test_striter
+	gcc $(LIB) tests/test_ft_striter.c  ../src/unity.c -o build/test_striter
+	./build/test_striter
+
+striteri:
+	rm -f build/test_striteri
+	gcc $(LIB) tests/test_ft_striteri.c  ../src/unity.c -o build/test_striteri
+	./build/test_striteri
+
+strmap:
+	rm -f build/test_strmap
+	gcc $(LIB) tests/test_ft_strmap.c  ../src/unity.c -o build/test_strmap
+	./build/test_strmap
+
+strmapi:
+	rm -f build/test_strmapi
+	gcc $(LIB) tests/test_ft_strmapi.c  ../src/unity.c -o build/test_strmapi
+	./build/test_strmapi
+
+strequ:
+	rm -f build/test_strequ
+	gcc $(LIB) tests/test_ft_strequ.c  ../src/unity.c -o build/test_strequ
+	./build/test_strequ
+
+strnequ:
+	rm -f build/test_strnequ
+	gcc $(LIB) tests/test_ft_strnequ.c  ../src/unity.c -o build/test_strnequ
+	./build/test_strnequ
+
+strsub:
+	rm -f build/test_strsub
+	gcc $(LIB) tests/test_ft_strsub.c  ../src/unity.c -o build/test_strsub
+	./build/test_strsub
+
+strjoin:
+	rm -f build/test_strjoin
+	gcc $(LIB) tests/test_ft_strjoin.c  ../src/unity.c -o build/test_strjoin
+	./build/test_strjoin
+
+strtrim:
+	rm -f build/test_strtrim
+	gcc $(LIB) tests/test_ft_strtrim.c  ../src/unity.c -o build/test_strtrim
+	./build/test_strtrim
 
 clean:
 	rm -f build/*
