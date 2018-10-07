@@ -1,6 +1,13 @@
 LIB = ../libft/libft.a
 
-all: memset bzero memcpy memccpy memmove memchr memcmp strlen strdup strcpy strncpy strcat strncat strlcat strchr strrchr strstr strcmp strncmp atoi isalpha isdigit isalnum isascii isprint toupper tolower memalloc memdel strnew strdel strclr striter striteri strmap strmapi strequ strnequ strnequ strsub strjoin strtrim
+all: relib memset bzero memcpy memccpy memmove memchr memcmp strlen strdup strcpy strncpy strcat strncat strlcat strchr strrchr strstr strcmp strncmp atoi isalpha isdigit isalnum isascii isprint toupper tolower memalloc memdel strnew strdel strclr striter striteri strmap strmapi strequ strnequ strnequ strsub strjoin strtrim
+
+relib:
+	cd ../libft && $(MAKE) re && $(MAKE) clean
+
+end:
+	cd ../libft && $(MAKE) fclean
+
 memset:
 	rm -f test/build/test_memset
 	gcc $(LIB) test/tests/test_ft_memset.c  src/unity.c -o test/build/test_memset
